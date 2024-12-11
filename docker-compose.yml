@@ -1,0 +1,11 @@
+version: '3'
+
+services:
+  Web:
+    image: "reactimage"
+    ports:
+      - "80:80"
+
+    container_name: reactapp
+    volumes:
+      - ./build:/usr/share/nginx/html
