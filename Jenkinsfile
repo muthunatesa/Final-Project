@@ -1,4 +1,4 @@
-ipipeline {
+pipeline {
     agent any
     environment {
         DOCKER_CREDENTIALS_ID = 'dockerhub-credentials' // Jenkins credentials ID for Docker Hub
