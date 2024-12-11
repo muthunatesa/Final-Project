@@ -1,11 +1,11 @@
 version: '3'
 
 services:
-  Web:
-    image: "reactimage"
+  web:
+    image: "muthunatesa/react-image"
     ports:
       - "80:80"
-
-    container_name: reactapp
+    container_name: react-app
     volumes:
       - ./build:/usr/share/nginx/html
+
