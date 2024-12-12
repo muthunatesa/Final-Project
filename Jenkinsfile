@@ -31,7 +31,7 @@ pipeline {
                     if (env.BRANCH_NAME == 'dev') {
                         // Tag and push to dev repository
                         sh "docker tag ${DOCKER_IMAGE_NAME}:latest ${DOCKER_IMAGE_NAME}/dev:latest"
-                        sh "docker push muthunates/dev:latest"
+                        sh "docker push muthunatesa/dev:latest"
                     } else if (env.BRANCH_NAME == 'main') {
                         // Tag and push to prod repository
                         sh "docker tag ${DOCKER_IMAGE_NAME}:latest ${DOCKER_IMAGE_NAME}/prod:latest"
