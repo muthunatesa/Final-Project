@@ -2,7 +2,7 @@
 
 set -e
 
-DOCKER_IMAGE_NAME="muthunatesa/react-image"
+DOCKER_IMAGE_NAME="react-image"
 DOCKER_TAG="latest"
 
 # Build the Docker image
