@@ -31,11 +31,11 @@ pipeline {
                     if (env.BRANCH_NAME == 'dev') {
                         // Tag and push to dev repository
                         sh "docker tag ${DOCKER_IMAGE_NAME}:latest ${DOCKER_IMAGE_NAME}/dev:latest"
-                        sh "docker push muthunatesa/dev:latest"
+                        sh "docker push ${DOCKER_IMAGE_NAME}/dev:latest"
                     } else if (env.BRANCH_NAME == 'main') {
                         // Tag and push to prod repository
                         sh "docker tag ${DOCKER_IMAGE_NAME}:latest ${DOCKER_IMAGE_NAME}/prod:latest"
-                        sh "docker push muthunatesa/prod:latest"
+                        sh "docker push ${DOCKER_IMAGE_NAME}/prod:latest"
                     } else {
                         echo "Branch ${env.BRANCH_NAME} does not match dev or main, skipping Docker push."
                     }
