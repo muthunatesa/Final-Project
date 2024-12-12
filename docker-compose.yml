@@ -2,7 +2,7 @@ version: '3'
 
 services:
   web:
-    image: "muthunatesa/react-image"
+    image: "react-image"
     ports:
       - "80:80"
     container_name: react-app

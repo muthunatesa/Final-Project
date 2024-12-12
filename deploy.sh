@@ -2,7 +2,7 @@
 
 set -e
 
-# Variables
+
 DOCKER_IMAGE_NAME="react-image"
 DOCKER_TAG="latest"
 CONTAINER_NAME="react-app"
@@ -22,17 +22,17 @@ fi
 
 echo "Pulling the latest Docker image from ${REPOSITORY}:${DOCKER_TAG}..."
 
-# Pull the latest Docker image
+# Pull the Docker image
 docker pull ${REPOSITORY}:${DOCKER_TAG}
 
-# Stop and remove the existing container if it exists
+# Stop and remove the existing container
 if [ "$(docker ps -q -f name=${CONTAINER_NAME})" ]; then
     echo "Stopping and removing existing container: ${CONTAINER_NAME}"
     docker stop ${CONTAINER_NAME}
     docker rm ${CONTAINER_NAME}
 fi
 
-# Run the new container from the pulled image
+
 echo "Running the new container..."
 docker run -d --name ${CONTAINER_NAME} -p 80:80 ${REPOSITORY}:${DOCKER_TAG}
 
